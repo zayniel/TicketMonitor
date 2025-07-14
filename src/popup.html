@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-    </head>
-    <body class>
-        <div id="monitor-container" class="container">
-            <img src="./ticketmonitor.png" width="250px"/>
-        </div>
-        <div class="interval-container">
-            <select name="intervalDropdown" class="dropdown">
-                <option value="0">Select refresh interval</option>
-                <option value="0.5">30 Seconds</option>
-                <option value="1">1 Minute</option>
-                <option value="2">2 Minutes</option>
-                <option value="5">5 Minutes</option>
-                <option value="10">10 Minutes</option>
-            </select>
-        </div>
-        <label class="switch">
-            <input type="checkbox" name="monitorCheckbox" />
-            <span class="slider round"></span>
-        </label>
-        <!-- Alert volume slider wip
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class>
+    <div id="monitor-container" class="container">
+      <img src="./ticketmonitor.png" width="250px" />
+    </div>
+    <div class="interval-container">
+      <select name="intervalDropdown" class="dropdown">
+        <option value="0">Select refresh interval</option>
+        <option value="0.083">5 Seconds</option>
+        <option value="0.166">10 Seconds</option>
+        <option value="0.25">15 Seconds</option>
+        <option value="0.5">30 Seconds</option>
+        <option value="1">1 Minute</option>
+        <option value="10">10 Minutes</option>
+      </select>
+    </div>
+    <label class="switch">
+      <input type="checkbox" name="monitorCheckbox" />
+      <span class="slider round"></span>
+    </label>
+    <!-- Alert volume slider wip
         <div id="volumeSettings" class="volume-slider">
             <label for="volumeSlider"></label>
             <input type="range" id="volumeSlider" min="0" max="100" value="50">
@@ -31,6 +32,6 @@
             <button class="audio-test-btn"></button>
         </div>
         -->
-        <script src="popup.js"></script>
-    </body>
+    <script src="popup.js"></script>
+  </body>
 </html>

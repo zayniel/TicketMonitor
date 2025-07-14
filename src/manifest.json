@@ -1,31 +1,30 @@
 {
-    "name": "TicketMonitor",
-    "version": "0.4.0",
-    "manifest_version": 3,
-    "description": "Refresh ticket board periodically and notify user of new tickets",
-    "permissions": ["activeTab", "storage", "tabs"],
-    "action": {
-        "default_icon": "favicon.png",
-        "default_popup": "popup.html",
-        "css": ["./styles.css"]
-    },
-    "background": {
-        "page": "background.html",
-        "service_worker": "background.js"
-    },
-    "host_permissions": ["https://*.wmed.edu/*"],
-    "web_accessible_resources": [
-        {
-            "resources": ["popup.js", "favicon.ico", "fearstofathom.mp3"],
-            "matches": ["https://support.wmed.edu/*"]
-        }
-    ],
-    "content_scripts": [
-        {
-          "matches": ["https://support.wmed.edu/LiveTime/WebObjects/*"],
-          "js": ["sweetalert2.all.min.js", "content.js"],
-          "css": ["injectedstyles.css"],
-          "run_at": "document_idle"
-        }
-      ]
+  "name": "TicketMonitor",
+  "version": "0.4.0",
+  "manifest_version": 3,
+  "description": "Refresh ticket board periodically and notify user of new tickets",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html",
+    "css": ["./styles.css"]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://support.wmed.edu/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js", "favicon.ico", "fearstofathom.mp3"],
+      "matches": ["https://support.wmed.edu/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://support.wmed.edu/LiveTime/WebObjects/*"],
+      "js": ["sweetalert2.all.min.js", "content.js"],
+      "css": ["injectedstyles.css"],
+      "run_at": "document_idle"
+    }
+  ]
 }
